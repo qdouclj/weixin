@@ -1,0 +1,33 @@
+创建类步骤
+
+一 spinner 创建类 先创建父类 在创建子类
+二 添加相关property
+1 类代码 TypeCode
+2 创建 编辑 克隆界面的显示与否 
+HHCreateAttrNoEditable
+HHCreateAttrNoRequired
+HHCreateAttributes
+HHEditAttrNoEditable
+HHEditAttrNoRequired
+HHEditAttributes
+HHCloneAttrNoEditable
+HHCloneAttrNoRequired
+HHCloneAttributes
+
+3 拼接规则描述
+物料类 sapdescriptionrule  
+	   mdmdescriptionrule
+整机类 HHSAPStandardJoin 
+       HHSAPOrderJoin 
+	   HHMDMStandardJoin 
+	   HHMDMOrderJoin
+
+4 整机类特有 categorys(结构形式代码)
+		 HHPropertyNameCode (品名代码)
+		 HHProductCode HHtypeCode (制造编码需要写入两个Property)
+5物料类特有 
+HHDrawingMaterialSpecificationsRule (图纸材料规格拼入描述规则)
+SparePartLab 备件标识
+CommonLevel 通用化管控级别
+HHDeletMM 值为 YES NO (mm单位是否去除的property)
+三 spinner从测试环境导出 导入正式环境
